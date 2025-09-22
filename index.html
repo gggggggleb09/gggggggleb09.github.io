@@ -10,21 +10,23 @@
   <!-- по умолчанию body блочный элемент, занимает 100% ширины родительского элемента html и имеет небольшой отступ margin по краям -->
   <body style="margin:0;">
 
-    <!-- этот блок будет тянуться по ширине окна -->
-    <div style="width:100%; background-color:#ccc; padding: 10px; height:120px;">
-      <!-- картинка обтекает текст слева -->
-      <img style="float:left; margin:10px; width:100px; height:100px;" src="alimenty-uchashemusya1.jpg" alt="ПОМОГИТЕ" />
-      <!-- этот блок, как положено блочному элементу по умолчанию, займет всю оставшуюся ширину родительского элемента -->
-      <div style="background-color:#9932сс; padding:30px; font-size:200%">ООО "Поставьте зачет"</div>
-    </div>
+      <header>
+      <div class="header-row">
+        <div class="logo-name">
+          <img src="alimenty-uchashemusya1.jpg" alt="ПОМОГИТЕ" class="logo-img">
+          <span class="site-name">PePeJaboWEBS</span>
+             <div style="background-color:#9932сс; padding:30px; font-size:200%">ООО "Поставьте зачет"</div>
 
-    <!-- этот блок будет ограничен по ширине и горизонтально выровнен по центру родительского элемента -->
-    <div style="max-width:800px; background-color:#ccc; margin: 0 auto; margin-top:20px; padding:10px;">
-    Контент
-    </div>
+        </div>
+        <nav id="main-nav">
+          <a href="#">Ссылка 1</a>
+          <a href="#">Ссылка 2</a>
+          <a href="#">Ссылка 3</a>
+        </nav>
+      </div>
+  </header>
 
 
-   
     <h2 id="top">Список ссылок </h2>
     <ul>
 <li> 
@@ -158,12 +160,21 @@
 
         <input type="submit" value="Сохранить" />
 
-      <div style="width:100px; background-color:#ccc; margin:50px; padding:50px;">
-      <span style="background-color:red;">Контент</span>
-          </div>
+          <div class="box">
+      <img src="webPicture.png" alt="Логотип Web">
+      <span>Web Programming</span>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Учебный сайт. Все права защищены.</p>
+    </div>
+  </footer>
 
 </body>
 </html>
+
 
 
 
