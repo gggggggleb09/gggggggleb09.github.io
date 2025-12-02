@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Labs</title>
+    <title>Lab</title>
  
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -76,6 +76,7 @@
             text-align: center;
         }
         
+        /* Стили для галереи */
         .gallery-container {
             margin-top: 40px;
             padding: 20px;
@@ -108,7 +109,7 @@
         
         .gallery-image {
             width: 100%;
-            height: 550px;
+            height: 200px;
             object-fit: cover;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -168,17 +169,8 @@
             color: white;
         }
         
-        @media (max-width: 768px) {
-            .gallery-slide {
-                flex: 0 0 100%;
-            }
-            
-            .gallery-image {
-                height: 250px;
-            }
-        }
-        
-     .feedback-button-container {
+        /* Стили для кнопки обратной связи */
+        .feedback-button-container {
             text-align: center;
             margin: 30px 0;
         }
@@ -201,6 +193,7 @@
             box-shadow: 0 6px 8px rgba(0,0,0,0.15);
         }
         
+        /* Стили для попапа с формой */
         .feedback-overlay {
             position: fixed;
             top: 0;
@@ -319,6 +312,7 @@
             border: 1px solid #f5c6cb;
         }
         
+        /* Адаптивность для мобильных устройств */
         @media (max-width: 768px) {
             .gallery-slide {
                 flex: 0 0 100%;
@@ -439,48 +433,50 @@
             </div>
         </div>
 
-         <div class="feedback-button-container">
+        <!-- Кнопка обратной связи -->
+        <div class="feedback-button-container">
             <button id="openFeedbackBtn" class="feedback-btn">Обратная связь</button>
         </div>
 
+        <!-- Галерея-слайдер -->
         <div class="gallery-container">
-            <h2 class="gallery-title">Галерея моих рисунков</h2>
+            <h2 class="gallery-title">Галерея изображений</h2>
             <div class="gallery-slider">
                 <button class="gallery-nav gallery-prev">&#10094;</button>
                 <div class="gallery-track">
                     <div class="gallery-slide">
-                        <img src="1.jfif" alt="Изображение 1" class="gallery-image">
+                        <img src="https://picsum.photos/id/1015/600/400" alt="Изображение 1" class="gallery-image">
                     </div>
                     <div class="gallery-slide">
-                        <img src="2.jfif" alt="Изображение 2" class="gallery-image">
+                        <img src="https://picsum.photos/id/1016/600/400" alt="Изображение 2" class="gallery-image">
                     </div>
                     <div class="gallery-slide">
-                        <img src="3.jfif" alt="Изображение 3" class="gallery-image">
+                        <img src="https://picsum.photos/id/1018/600/400" alt="Изображение 3" class="gallery-image">
                     </div>
                     <div class="gallery-slide">
-                        <img src="4.jfif" alt="Изображение 4" class="gallery-image">
+                        <img src="https://picsum.photos/id/1020/600/400" alt="Изображение 4" class="gallery-image">
                     </div>
                     <div class="gallery-slide">
-                        <img src="5.jfif" alt="Изображение 5" class="gallery-image">
+                        <img src="https://picsum.photos/id/1021/600/400" alt="Изображение 5" class="gallery-image">
                     </div>
                     <div class="gallery-slide">
-                        <img src="6.jfif" alt="Изображение 6" class="gallery-image">
+                        <img src="https://picsum.photos/id/1022/600/400" alt="Изображение 6" class="gallery-image">
                     </div>
                     <div class="gallery-slide">
-                        <img src="7.jfif" alt="Изображение 7" class="gallery-image">
+                        <img src="https://picsum.photos/id/1023/600/400" alt="Изображение 7" class="gallery-image">
                     </div>
                     <div class="gallery-slide">
-                        <img src="8.jfif" alt="Изображение 8" class="gallery-image">
+                        <img src="https://picsum.photos/id/1024/600/400" alt="Изображение 8" class="gallery-image">
                     </div>
                 </div>
                 <button class="gallery-nav gallery-next">&#10095;</button>
             </div>
             <div class="gallery-pager" id="galleryPager">
-              
+                <!-- Пейджер будет сгенерирован JavaScript -->
             </div>
         </div>
 
-      
+        <!-- Калькулятор стоимости заказа -->
         <div class="calculator-container">
             <h2>Калькулятор стоимости заказа</h2>
             <div class="row">
@@ -515,7 +511,7 @@
             </div>
         </div>
 
-
+        <!-- Калькулятор стоимости услуги -->
         <div class="calculator-container">
             <h2>Калькулятор стоимости услуги</h2>
             <div class="row">
@@ -578,8 +574,8 @@
             </div>
         </div>
 
-       
-          <div class="feedback-overlay" id="feedbackOverlay">
+        <!-- Форма обратной связи в попапе -->
+        <div class="feedback-overlay" id="feedbackOverlay">
             <div class="feedback-popup">
                 <button class="close-btn" id="closeFeedbackBtn">&times;</button>
                 <h2 class="feedback-title">Обратная связь</h2>
@@ -624,6 +620,78 @@
             </div>
         </div>
 
+        <!-- Форма -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <form id="form">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">ФИО</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Джон Джонович Доу">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Номер телефона:</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="+7 999 123-45-67">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">email:</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="email@mail.ru">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="birthdate" class="form-label">Дата рождения:</label>
+                        <input type="number" class="form-control" id="birthdate" name="birthdate">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Пол:</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                            <label class="form-check-label" for="male">Мужской</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                            <label class="form-check-label" for="female">Женский</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gender" id="alien" value="alien">
+                            <label class="form-check-label" for="alien">Пришелец</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gender" id="android" value="android">
+                            <label class="form-check-label" for="android">Андроид</label>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="languages" class="form-label">Любимый язык программирования:</label>
+                        <select class="form-select" id="languages" name="languages[]" multiple size="10">
+                            <option value="Pascal">Pascal</option>
+                            <option value="C">C</option>
+                            <option value="C++">C++</option>
+                            <option value="JavaScript">JavaScript</option>
+                            <option value="PHP">PHP</option>
+                            <option value="Python">Python</option>
+                            <option value="Java">Java</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="bio" class="form-label">Биография:</label>
+                        <textarea class="form-control" id="bio" name="bio" placeholder="Биография" rows="5"></textarea>
+                    </div>
+
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="agree" name="agree" required>
+                        <label class="form-check-label" for="agree">С соглашением ознакомлен(а)</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Сохранить</button>
+                </form>
+            </div>
+        </div>
+
         <div class="row mt-4">
             <div class="col-12">
                 <div style="background-color:#ff8c00; padding:10px;"></div>
@@ -640,20 +708,19 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     
     <script>
-        
+        // Код для галереи
         document.addEventListener('DOMContentLoaded', function() {
-            
+            // Элементы галереи
             const galleryTrack = document.querySelector('.gallery-track');
             const gallerySlides = document.querySelectorAll('.gallery-slide');
             const prevButton = document.querySelector('.gallery-prev');
             const nextButton = document.querySelector('.gallery-next');
             const galleryPager = document.getElementById('galleryPager');
             
-           
+            // Настройки галереи
             let currentSlide = 0;
-            let slidesPerView = 3; 
+            let slidesPerView = 3;
             
-           
             function updateSlidesPerView() {
                 if (window.innerWidth <= 768) {
                     slidesPerView = 1;
@@ -663,7 +730,6 @@
                 updateGallery();
             }
             
-           
             function getTotalPages() {
                 return Math.ceil(gallerySlides.length / slidesPerView);
             }
@@ -673,10 +739,8 @@
                 const translateX = -currentSlide * slideWidth;
                 galleryTrack.style.transform = `translateX(${translateX}%)`;
                 
-                
                 updatePager();
             }
-            
             
             function createPager() {
                 galleryPager.innerHTML = '';
@@ -696,18 +760,15 @@
                 }
             }
             
-            
             function updatePager() {
                 const totalPages = getTotalPages();
                 const pageElements = document.querySelectorAll('.gallery-page');
                 
-              
                 if (pageElements.length !== totalPages) {
                     createPager();
                     return;
                 }
                 
-               
                 pageElements.forEach((page, index) => {
                     if (index === currentSlide) {
                         page.classList.add('active');
@@ -717,7 +778,6 @@
                 });
             }
             
-           
             function goToSlide(slideIndex) {
                 const totalPages = getTotalPages();
                 
@@ -732,30 +792,28 @@
                 updateGallery();
             }
             
-                        function nextSlide() {
+            function nextSlide() {
                 goToSlide(currentSlide + 1);
             }
-            
             
             function prevSlide() {
                 goToSlide(currentSlide - 1);
             }
             
-            
             function initGallery() {
                 updateSlidesPerView();
                 createPager();
-              
+                
                 prevButton.addEventListener('click', prevSlide);
                 nextButton.addEventListener('click', nextSlide);
-          
+                
                 window.addEventListener('resize', updateSlidesPerView);
             }
             
- 
             initGallery();
         });
 
+        // Код для калькулятора товаров
         document.addEventListener('DOMContentLoaded', function() {
             const productSelect = document.getElementById('product');
             const quantityInput = document.getElementById('quantity');
@@ -801,7 +859,7 @@
             });
         });
 
-        
+        // Код для калькулятора услуг
         document.addEventListener('DOMContentLoaded', function() {
             const serviceTypeRadios = document.querySelectorAll('.service-type');
             const quantityInput = document.getElementById('quantityService');
@@ -863,7 +921,8 @@
             updateInterface();
         });
 
-          document.addEventListener('DOMContentLoaded', function() {
+        // Код для формы обратной связи
+        document.addEventListener('DOMContentLoaded', function() {
             const feedbackOverlay = document.getElementById('feedbackOverlay');
             const openFeedbackBtn = document.getElementById('openFeedbackBtn');
             const closeFeedbackBtn = document.getElementById('closeFeedbackBtn');
@@ -871,11 +930,9 @@
             const messageContainer = document.getElementById('messageContainer');
             const submitBtn = document.getElementById('submitBtn');
             
+            // Ключ для LocalStorage
             const STORAGE_KEY = 'feedback_form_data';
             
-    </script>
-</body>
-</html>
 
 
 
